@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Conditions d'utilisation Kingdom</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Layout: single reading column, seal-style header band, language switch, numbered articles (legal order is real). */
+:root {
+  --paper: #f3f4f7; --ink: #1d2433; --muted: #5a6275; --rule: #d5d9e3; --royal: #24407a; --gold: #9a6b12; --card: #ffffff;
+  --display: "Alegreya SC", "Iowan Old Style", Georgia, serif;
+  --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper: #141823; --ink: #e5e8f0; --muted: #a2a9ba; --rule: #2c3346; --royal: #9fb6ec; --gold: #e0b45a; --card: #1b2030; color-scheme: dark } }
+:root[data-theme="dark"] { --paper: #141823; --ink: #e5e8f0; --muted: #a2a9ba; --rule: #2c3346; --royal: #9fb6ec; --gold: #e0b45a; --card: #1b2030; color-scheme: dark }
+html { -webkit-text-size-adjust: 100%; } body { margin: 0; } img { max-width: 100%; } [hidden] { display: none !important; }
+body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 1.0625rem; line-height: 1.65; }
+.wrap { max-width: 44rem; margin: 0 auto; padding-block: 2.5rem 4rem; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header { display: grid; gap: .5rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--royal); margin-bottom: 1.5rem; }
+.eyebrow { font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(1.9rem, 5vw, 2.6rem); line-height: 1.15; margin: 0; color: var(--royal); text-wrap: balance; }
+.meta { color: var(--muted); font-size: .92rem; }
+.bar { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; }
+.langs { display: inline-flex; border: 1px solid var(--rule); border-radius: 999px; overflow: hidden; }
+.langs button { font: inherit; font-size: .9rem; padding: .3rem .9rem; border: 0; background: transparent; color: var(--muted); cursor: pointer; }
+.langs button[aria-pressed="true"] { background: var(--royal); color: var(--paper); }
+.langs button:focus-visible, a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+a { color: var(--royal); }
+.other { font-size: .92rem; }
+.summary { background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 2rem; }
+.summary p { margin: 0; }
+ol.articles { list-style: none; counter-reset: art; padding: 0; margin: 0; display: grid; gap: 1.75rem; }
+ol.articles > li { counter-increment: art; }
+h2 { font-family: var(--display); font-weight: 500; font-size: 1.35rem; margin: 0 0 .4rem; color: var(--ink); text-wrap: balance; }
+h2::before { content: counter(art) ". "; color: var(--gold); }
+p, ul { margin: 0 0 .6rem; }
+ul { padding-left: 1.2rem; }
+li + li { margin-top: .2rem; }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .9rem; }
+.contact { font-weight: 600; user-select: all; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <span class="eyebrow">KINGDOM — Économie Royale</span>
+  <h1 data-lang="fr">Conditions d'utilisation</h1>
+  <h1 data-lang="en" hidden>Terms of Service</h1>
+  <span class="meta" data-lang="fr">En vigueur au 16 octobre 2026</span>
+  <span class="meta" data-lang="en" hidden>Effective October 16, 2026</span>
+</header>
+<div class="bar">
+  <div class="langs" role="group" aria-label="Langue / Language">
+    <button type="button" data-set="fr" aria-pressed="true">Français</button>
+    <button type="button" data-set="en" aria-pressed="false">English</button>
+  </div>
+  <a class="other" href="privacy.html"><span data-lang="fr">Politique de confidentialité →</span><span data-lang="en" hidden>Privacy Policy →</span></a>
+</div>
+
+<section data-lang="fr">
+<div class="summary"><p>KINGDOM est un jeu gratuit sur Discord, réservé aux membres du serveur du Royaume. La monnaie et les objets du jeu n'ont aucune valeur réelle. Jouez honnêtement et respectez les autres joueurs.</p></div>
+<ol class="articles">
+<li><h2>Objet</h2><p>Ces conditions encadrent l'utilisation de KINGDOM — Économie Royale (« le Service ») : le bot Discord, ses commandes et l'Activité Discord du jeu. Le Service est développé et exploité à titre non commercial par un développeur indépendant (Legosi), appelé ci-après « l'éditeur ». Utiliser le Service vaut acceptation de ces conditions.</p></li>
+<li><h2>Accès</h2><ul><li>Le Service est réservé aux membres du serveur Discord du Royaume. L'éditeur peut le limiter, le mettre en maintenance ou le fermer à tout moment.</li><li>Vous devez respecter les <a href="https://discord.com/terms" target="_blank" rel="noopener">Conditions d'utilisation</a> et les <a href="https://discord.com/guidelines" target="_blank" rel="noopener">Règles de la communauté</a> de Discord, y compris l'âge minimum exigé par Discord dans votre pays.</li><li>Le Service est gratuit. Il ne propose aucun achat ni abonnement.</li></ul></li>
+<li><h2>Monnaie et objets virtuels</h2><p>Les Écus, objets, équipements, titres et autres éléments du jeu sont virtuels. Ils ne vous appartiennent pas, n'ont aucune valeur monétaire et ne peuvent pas être vendus, achetés ou échangés contre de l'argent réel ou des biens extérieurs au jeu. Toute transaction de ce type est interdite.</p></li>
+<li><h2>Règles de conduite</h2><p>Il est interdit de :</p><ul><li>tricher, exploiter un bug volontairement ou ne pas signaler un bug qui procure un avantage ;</li><li>automatiser le jeu (scripts, macros, programmes tiers) ou modifier le client de l'Activité ;</li><li>utiliser plusieurs comptes pour s'avantager ;</li><li>tenter d'accéder aux systèmes, aux données d'autres joueurs ou de perturber le Service ;</li><li>harceler, insulter ou nuire à d'autres joueurs, y compris par les émotes et phrases de l'Activité.</li></ul></li>
+<li><h2>Modération et sanctions</h2><p>L'équipe du Royaume (propriétaires, administrateurs, modérateurs) peut, selon la gravité : rendre un joueur muet dans l'Activité, l'en expulser, annuler un duel, retirer des gains obtenus de manière irrégulière, réinitialiser une progression ou bloquer l'accès au Service. Les actions de modération sont journalisées.</p></li>
+<li><h2>Évolution du jeu</h2><p>Le jeu est en développement actif. L'éditeur peut à tout moment modifier les règles, l'équilibrage, les prix, les objets ou les contenus, et procéder à des réinitialisations, sans compensation. Le Service est fourni « en l'état », sans garantie de disponibilité, de continuité ou d'absence d'erreurs.</p></li>
+<li><h2>Contenus tiers</h2><p>Le jeu utilise des ressources sous licence libre : graphismes de Kenney (CC0), emojis Twemoji (CC-BY 4.0) et musique « Towball's Crossing » de Towball (CC-BY 4.0). Les crédits complets sont fournis avec l'Activité. Discord est une marque de Discord Inc. ; le Service n'est ni affilié à Discord ni approuvé par Discord.</p></li>
+<li><h2>Responsabilité</h2><p>Dans les limites permises par la loi, l'éditeur ne peut être tenu responsable d'une perte de progression ou de données de jeu, d'une interruption du Service, ni d'un dommage indirect lié à son utilisation.</p></li>
+<li><h2>Données personnelles</h2><p>Le traitement de vos données est décrit dans la <span class="privacy-ref">Politique de confidentialité</span>.</p></li>
+<li><h2>Arrêt de l'utilisation</h2><p>Vous pouvez cesser d'utiliser le Service à tout moment et demander la suppression de vos données de jeu (voir la Politique de confidentialité).</p></li>
+<li><h2>Modification des conditions</h2><p>Ces conditions peuvent être mises à jour. La date en haut de page indique la dernière version. Les changements importants sont annoncés sur le serveur Discord du Royaume. Continuer à utiliser le Service après une mise à jour vaut acceptation.</p></li>
+<li><h2>Droit applicable et contact</h2><p>Ces conditions sont soumises au droit français. Pour toute question : message privé à <strong>Legosi</strong> (identifiant Discord <span class="contact">legosi_</span>) sur le serveur Discord du Royaume.</p></li>
+</ol>
+</section>
+
+<section data-lang="en" hidden>
+<div class="summary"><p>KINGDOM is a free game on Discord, reserved for members of the Kingdom's server. In-game currency and items have no real-world value. Play fair and respect other players.</p></div>
+<ol class="articles">
+<li><h2>Purpose</h2><p>These terms govern the use of KINGDOM — Économie Royale (the "Service"): the Discord bot, its commands and the game's Discord Activity. The Service is developed and run on a non-commercial basis by an independent developer (Legosi), the "publisher". Using the Service means you accept these terms.</p></li>
+<li><h2>Access</h2><ul><li>The Service is reserved for members of the Kingdom's Discord server. The publisher may restrict it, put it under maintenance or close it at any time.</li><li>You must follow Discord's <a href="https://discord.com/terms" target="_blank" rel="noopener">Terms of Service</a> and <a href="https://discord.com/guidelines" target="_blank" rel="noopener">Community Guidelines</a>, including the minimum age Discord requires in your country.</li><li>The Service is free. It offers no purchases or subscriptions.</li></ul></li>
+<li><h2>Virtual currency and items</h2><p>Écus (the game currency), items, equipment, titles and other game elements are virtual. You do not own them, they have no monetary value and they cannot be sold, bought or exchanged for real money or goods outside the game. Any such transaction is forbidden.</p></li>
+<li><h2>Code of conduct</h2><p>You must not:</p><ul><li>cheat, knowingly exploit a bug, or keep quiet about a bug that gives an advantage;</li><li>automate the game (scripts, macros, third-party programs) or modify the Activity client;</li><li>use several accounts to gain an advantage;</li><li>try to access the systems or other players' data, or disrupt the Service;</li><li>harass, insult or harm other players, including through the Activity's emotes and phrases.</li></ul></li>
+<li><h2>Moderation and sanctions</h2><p>The Kingdom's team (owners, administrators, moderators) may, depending on severity: mute a player in the Activity, remove them from it, cancel a duel, take back gains obtained unfairly, reset progress or block access to the Service. Moderation actions are logged.</p></li>
+<li><h2>Changes to the game</h2><p>The game is under active development. The publisher may change rules, balance, prices, items or content and perform resets at any time, without compensation. The Service is provided "as is", with no guarantee of availability, continuity or freedom from errors.</p></li>
+<li><h2>Third-party content</h2><p>The game uses openly licensed assets: graphics by Kenney (CC0), Twemoji emojis (CC-BY 4.0) and the music "Towball's Crossing" by Towball (CC-BY 4.0). Full credits ship with the Activity. Discord is a trademark of Discord Inc.; the Service is not affiliated with or endorsed by Discord.</p></li>
+<li><h2>Liability</h2><p>To the extent permitted by law, the publisher is not liable for any loss of game progress or data, interruption of the Service, or indirect damage related to its use.</p></li>
+<li><h2>Personal data</h2><p>How your data is handled is described in the <span class="privacy-ref">Privacy Policy</span>.</p></li>
+<li><h2>Stopping use</h2><p>You may stop using the Service at any time and ask for your game data to be deleted (see the Privacy Policy).</p></li>
+<li><h2>Changes to these terms</h2><p>These terms may be updated. The date at the top shows the latest version. Important changes are announced on the Kingdom's Discord server. Continuing to use the Service after an update means you accept it.</p></li>
+<li><h2>Governing law and contact</h2><p>These terms are governed by French law. For any question: send a direct message to <strong>Legosi</strong> (Discord username <span class="contact">legosi_</span>) on the Kingdom's Discord server.</p></li>
+</ol>
+</section>
+<footer data-lang="fr">KINGDOM — Économie Royale · Version anglaise disponible avec le bouton « English ».</footer>
+<footer data-lang="en" hidden>KINGDOM — Économie Royale · In case of difference, the French version prevails.</footer>
+</div>
+<script>
+(function () {
+  var buttons = document.querySelectorAll('.langs button');
+  function show(lang) {
+    document.querySelectorAll('[data-lang]').forEach(function (el) { el.hidden = el.getAttribute('data-lang') !== lang; });
+    buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.set === lang)); });
+    document.documentElement.lang = lang;
+  }
+  buttons.forEach(function (b) { b.addEventListener('click', function () { show(b.dataset.set); }); });
+  show(location.hash === '#en' ? 'en' : 'fr');
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Confidentialité Kingdom</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+/* Layout: single reading column, seal-style header band, language switch, numbered articles (legal order is real). */
+:root {
+  --paper: #f3f4f7; --ink: #1d2433; --muted: #5a6275; --rule: #d5d9e3; --royal: #24407a; --gold: #9a6b12; --card: #ffffff;
+  --display: "Alegreya SC", "Iowan Old Style", Georgia, serif;
+  --body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --paper: #141823; --ink: #e5e8f0; --muted: #a2a9ba; --rule: #2c3346; --royal: #9fb6ec; --gold: #e0b45a; --card: #1b2030; color-scheme: dark } }
+:root[data-theme="dark"] { --paper: #141823; --ink: #e5e8f0; --muted: #a2a9ba; --rule: #2c3346; --royal: #9fb6ec; --gold: #e0b45a; --card: #1b2030; color-scheme: dark }
+html { -webkit-text-size-adjust: 100%; } body { margin: 0; } img { max-width: 100%; } [hidden] { display: none !important; }
+body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 1.0625rem; line-height: 1.65; }
+.wrap { max-width: 44rem; margin: 0 auto; padding-block: 2.5rem 4rem; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header { display: grid; gap: .5rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--royal); margin-bottom: 1.5rem; }
+.eyebrow { font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(1.9rem, 5vw, 2.6rem); line-height: 1.15; margin: 0; color: var(--royal); text-wrap: balance; }
+.meta { color: var(--muted); font-size: .92rem; }
+.bar { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; }
+.langs { display: inline-flex; border: 1px solid var(--rule); border-radius: 999px; overflow: hidden; }
+.langs button { font: inherit; font-size: .9rem; padding: .3rem .9rem; border: 0; background: transparent; color: var(--muted); cursor: pointer; }
+.langs button[aria-pressed="true"] { background: var(--royal); color: var(--paper); }
+.langs button:focus-visible, a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+a { color: var(--royal); }
+.other { font-size: .92rem; }
+.summary { background: var(--card); border: 1px solid var(--rule); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 2rem; }
+.summary p { margin: 0; }
+ol.articles { list-style: none; counter-reset: art; padding: 0; margin: 0; display: grid; gap: 1.75rem; }
+ol.articles > li { counter-increment: art; }
+h2 { font-family: var(--display); font-weight: 500; font-size: 1.35rem; margin: 0 0 .4rem; color: var(--ink); text-wrap: balance; }
+h2::before { content: counter(art) ". "; color: var(--gold); }
+p, ul { margin: 0 0 .6rem; }
+ul { padding-left: 1.2rem; }
+li + li { margin-top: .2rem; }
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: .9rem; }
+.contact { font-weight: 600; user-select: all; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <span class="eyebrow">KINGDOM — Économie Royale</span>
+  <h1 data-lang="fr">Politique de confidentialité</h1>
+  <h1 data-lang="en" hidden>Privacy Policy</h1>
+  <span class="meta" data-lang="fr">En vigueur au 16 octobre 2026</span>
+  <span class="meta" data-lang="en" hidden>Effective October 16, 2026</span>
+</header>
+<div class="bar">
+  <div class="langs" role="group" aria-label="Langue / Language">
+    <button type="button" data-set="fr" aria-pressed="true">Français</button>
+    <button type="button" data-set="en" aria-pressed="false">English</button>
+  </div>
+  <a class="other" href="terms.html"><span data-lang="fr">Conditions d'utilisation →</span><span data-lang="en" hidden>Terms of Service →</span></a>
+</div>
+
+<section data-lang="fr">
+<div class="summary"><p>KINGDOM conserve votre identifiant Discord et votre progression dans le jeu, rien de plus. Il ne lit pas vos messages, ne vend aucune donnée et ne fait pas de publicité. Vous pouvez demander la suppression de vos données à tout moment.</p></div>
+<ol class="articles">
+<li><h2>Responsable du traitement</h2><p>Les données sont traitées par l'éditeur de KINGDOM — Économie Royale, développeur indépendant (Legosi), pour le bot Discord, ses commandes et l'Activité Discord du jeu.</p></li>
+<li><h2>Données collectées</h2>
+<p><strong>Fournies par Discord</strong></p>
+<ul><li>Votre identifiant Discord, votre pseudo et votre nom affiché sur le serveur du Royaume.</li><li>Vos rôles sur ce serveur, qui déterminent votre Maison et votre éventuel rang dans l'équipe.</li><li>Dans l'Activité, Discord vous demande d'autoriser le partage de votre identité (autorisation « identify » : identifiant, nom d'utilisateur, avatar). Elle sert uniquement à vous reconnaître. Le jeton d'accès n'est pas enregistré.</li></ul>
+<p><strong>Créées par votre jeu</strong></p>
+<ul><li>Progression : Écus, inventaire, équipement, métiers, classe, niveaux, énergie, titres, amitié avec les villageois, collections.</li><li>Historique de jeu : transactions, achats et ventes, annonces du marché, échanges entre joueurs, récoltes, duels et combats, contributions aux projets de Maison, dons au musée.</li><li>Position de votre personnage sur les cartes de l'Activité.</li></ul>
+<p><strong>Journaux techniques</strong></p>
+<ul><li>Événements du serveur (connexions à l'Activité, erreurs, actions de modération) associés à votre identifiant Discord. Les jetons et secrets n'y figurent jamais.</li></ul>
+<p><strong>Ce que KINGDOM ne collecte pas</strong> : le contenu de vos messages Discord, votre adresse e-mail, vos données de paiement, votre position géographique.</p></li>
+<li><h2>Finalités et base légale</h2><p>Ces données servent uniquement à faire fonctionner le jeu (sauvegarder votre progression, afficher les classements, permettre les échanges et les duels), à le sécuriser contre la triche et les abus, et à le modérer. La base légale est l'intérêt légitime de l'éditeur à fournir le jeu que vous choisissez d'utiliser (article 6.1.f du RGPD).</p></li>
+<li><h2>Visibilité et partage</h2><ul><li>Certaines informations de jeu sont visibles des autres joueurs : votre nom, votre Maison, votre classe, votre titre, vos classements, vos annonces du marché et votre personnage dans l'Activité.</li><li>Les données ne sont ni vendues, ni louées, ni utilisées pour de la publicité.</li><li>Elles sont stockées sur le serveur qui héberge le bot et transitent par Discord, qui les traite selon sa propre <a href="https://discord.com/privacy" target="_blank" rel="noopener">politique de confidentialité</a>.</li><li>Elles peuvent être communiquées aux autorités si la loi l'exige.</li></ul></li>
+<li><h2>Durée de conservation</h2><ul><li>Données de jeu : tant que vous jouez, jusqu'à une demande de suppression ou l'arrêt du Service.</li><li>Journaux techniques : 14 jours, puis suppression automatique.</li><li>Sauvegardes de la base de données : les plus récentes seulement, remplacées au fil du temps.</li></ul></li>
+<li><h2>Sécurité</h2><p>L'accès aux données est limité à l'éditeur. Les secrets (jetons du bot et de l'application) ne sont jamais enregistrés dans les journaux, et l'Activité n'accepte que les connexions venant de Discord pour les membres du serveur du Royaume.</p></li>
+<li><h2>Vos droits</h2><p>Conformément au RGPD, vous pouvez demander l'accès à vos données, leur rectification, leur suppression ou vous opposer à leur traitement. Écrivez en message privé à <strong>Legosi</strong> (identifiant Discord <span class="contact">legosi_</span>) sur le serveur Discord du Royaume. Une réponse vous sera donnée dans un délai d'un mois. Vous pouvez aussi adresser une réclamation à la CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener">cnil.fr</a>).</p></li>
+<li><h2>Stockage local</h2><p>L'Activité enregistre dans votre navigateur ou l'application Discord quelques préférences d'affichage (volume, musique, mini-carte). Ces informations restent sur votre appareil. Aucun cookie publicitaire ni outil de suivi n'est utilisé.</p></li>
+<li><h2>Mineurs</h2><p>Le Service suit l'âge minimum fixé par Discord dans votre pays. Il ne demande aucune donnée au-delà de celles décrites ci-dessus.</p></li>
+<li><h2>Modifications</h2><p>Cette politique peut être mise à jour. La date en haut de page indique la dernière version, et les changements importants sont annoncés sur le serveur Discord du Royaume.</p></li>
+</ol>
+</section>
+
+<section data-lang="en" hidden>
+<div class="summary"><p>KINGDOM keeps your Discord ID and your game progress, nothing more. It does not read your messages, sell any data or show ads. You can ask for your data to be deleted at any time.</p></div>
+<ol class="articles">
+<li><h2>Data controller</h2><p>Data is processed by the publisher of KINGDOM — Économie Royale, an independent developer (Legosi), for the Discord bot, its commands and the game's Discord Activity.</p></li>
+<li><h2>Data collected</h2>
+<p><strong>Provided by Discord</strong></p>
+<ul><li>Your Discord ID, username and display name on the Kingdom's server.</li><li>Your roles on that server, which decide your House and any team rank.</li><li>In the Activity, Discord asks you to share your identity (the "identify" permission: ID, username, avatar). It is used only to recognise you. The access token is not stored.</li></ul>
+<p><strong>Created by your play</strong></p>
+<ul><li>Progress: Écus, inventory, equipment, professions, class, levels, energy, titles, friendship with villagers, collections.</li><li>Game history: transactions, purchases and sales, market listings, trades between players, gathering, duels and fights, contributions to House projects, museum donations.</li><li>Your character's position on the Activity maps.</li></ul>
+<p><strong>Technical logs</strong></p>
+<ul><li>Server events (Activity connections, errors, moderation actions) linked to your Discord ID. Tokens and secrets never appear in them.</li></ul>
+<p><strong>What KINGDOM does not collect</strong>: the content of your Discord messages, your email address, payment data, your geographic location.</p></li>
+<li><h2>Purposes and legal basis</h2><p>This data is used only to run the game (saving your progress, showing rankings, enabling trades and duels), to protect it against cheating and abuse, and to moderate it. The legal basis is the publisher's legitimate interest in providing the game you choose to use (GDPR article 6(1)(f)).</p></li>
+<li><h2>Visibility and sharing</h2><ul><li>Some game information is visible to other players: your name, House, class, title, rankings, market listings and your character in the Activity.</li><li>Data is never sold, rented or used for advertising.</li><li>It is stored on the server that hosts the bot and passes through Discord, which handles it under its own <a href="https://discord.com/privacy" target="_blank" rel="noopener">privacy policy</a>.</li><li>It may be disclosed to authorities where the law requires it.</li></ul></li>
+<li><h2>Retention</h2><ul><li>Game data: while you play, until you ask for deletion or the Service shuts down.</li><li>Technical logs: 14 days, then deleted automatically.</li><li>Database backups: only the most recent ones are kept and replaced over time.</li></ul></li>
+<li><h2>Security</h2><p>Access to the data is limited to the publisher. Secrets (bot and application tokens) are never written to logs, and the Activity only accepts connections coming from Discord for members of the Kingdom's server.</p></li>
+<li><h2>Your rights</h2><p>Under the GDPR you can ask to access, correct or delete your data, or object to its processing. Send a direct message to <strong>Legosi</strong> (Discord username <span class="contact">legosi_</span>) on the Kingdom's Discord server. You will get an answer within one month. You can also file a complaint with the CNIL, the French data protection authority (<a href="https://www.cnil.fr" target="_blank" rel="noopener">cnil.fr</a>).</p></li>
+<li><h2>Local storage</h2><p>The Activity saves a few display preferences (volume, music, minimap) in your browser or Discord app. They stay on your device. No advertising cookies or tracking tools are used.</p></li>
+<li><h2>Minors</h2><p>The Service follows the minimum age set by Discord in your country. It asks for no data beyond what is described above.</p></li>
+<li><h2>Changes</h2><p>This policy may be updated. The date at the top shows the latest version, and important changes are announced on the Kingdom's Discord server.</p></li>
+</ol>
+</section>
+<footer data-lang="fr">KINGDOM — Économie Royale · Version anglaise disponible avec le bouton « English ».</footer>
+<footer data-lang="en" hidden>KINGDOM — Économie Royale · In case of difference, the French version prevails.</footer>
+</div>
+<script>
+(function () {
+  var buttons = document.querySelectorAll('.langs button');
+  function show(lang) {
+    document.querySelectorAll('[data-lang]').forEach(function (el) { el.hidden = el.getAttribute('data-lang') !== lang; });
+    buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.set === lang)); });
+    document.documentElement.lang = lang;
+  }
+  buttons.forEach(function (b) { b.addEventListener('click', function () { show(b.dataset.set); }); });
+  show(location.hash === '#en' ? 'en' : 'fr');
+})();
+</script>
+</body>
+</html>
