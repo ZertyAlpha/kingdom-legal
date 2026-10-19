@@ -54,3 +54,9 @@ Les engagements d'effacement ajoutés restent des exigences à mettre en œuvre 
 ## Validation
 
 Lecture des fichiers cités et recherches ciblées GitHub, puis comparaison avec la politique. Aucun audit exhaustif des dépendances ou secrets et aucun test d'exécution du bot. Vérification de l'identité des contenus relus depuis GitHub et de l'équilibrage des balises HTML sur les pages modifiées. La PR reste en brouillon et main n'est pas modifiée.
+
+## Récupération après changement d'avis — proposition du 19 octobre 2026
+
+À la demande de l'éditeur, la politique FR/EN précise une récupération temporaire après une demande de suppression de personnage : option expressément choisie par le joueur, copie minimale pendant 7 jours au maximum, puis effacement définitif de la copie ; effacement aussi dès restauration. Le délai de 7 jours est une proposition éditoriale, pas une durée déjà constatée dans le bot. Une demande explicite d'effacement des données ne doit pas être différée par cette option et les suppressions de modération ne valent pas consentement du joueur.
+
+**À implémenter avant publication :** choix explicite dans le parcours joueur, horodatage de la demande et échéance non renouvelable, purge des copies expirées y compris après redémarrage, suppression de la copie après restauration, et traitement des autres références/exports/sauvegardes sans réintroduction. Le code actuel crée des character_backups lors de suppressions de modération et ne met pas en œuvre ce parcours ni cette purge. La clause reste une proposition en brouillon, pas une description validée de la production. Elle concerne la sauvegarde de récupération, pas à elle seule l'effacement de tout l'historique joueur.
